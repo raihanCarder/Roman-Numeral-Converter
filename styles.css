@@ -1,0 +1,156 @@
+:root {
+    --main-section-color: rgba(245, 241, 200, 0.94);
+    --title-color: #3E2F1C;
+    --converter-section-color: rgba(107, 11, 11, 1);
+    --converter-text-color: rgba(245, 241, 200, 1);
+    --button-color: rgba(245, 241, 200, 1);
+    --button-hover-color: rgba(225, 220, 180, 1);
+    --shadow-color: #3E2F1C;
+    --extra-details-color: rgba(107, 11, 11, 1);
+    --extra-details-text-color: white;
+    --link-color: rgba(225, 220, 180, 1);
+    --valid-background-color: #3E2F1C;
+    --valid-text-color: white;
+    --error-border-color: rgba(220, 20, 60, 1);
+    --error-background-color: rgba(220, 20, 60, 0.3);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Georgia', serif;
+}
+
+body {
+    background-image: url("https://cdn.britannica.com/80/179480-138-A0F9E136/poisoning-malaria-experts-decline-Roman-Empire.jpg?w=800&h=450&c=crop");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+}
+
+.main-section {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    background-color: var(--main-section-color);
+    align-items: center;
+    width: fit-content;
+    padding: 20px;
+    border-radius: 10px;
+    height: 100vh;
+    gap: 20px;
+    max-width: 500px;
+}
+
+
+
+h1 {
+    color: var(--title-color);
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-size: 45px;
+    text-align: center;
+}
+
+/*Converter Section */
+
+.converter-section {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--converter-section-color);
+    padding: 20px;
+    border-radius: 30px;
+    width: 100%;
+    box-shadow: 0 5px 3px var(--shadow-color);
+
+}
+
+h3 {
+    font-size: 24px;
+    color: var(--converter-text-color);
+}
+
+input {
+    padding: 3px;
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+}
+
+button {
+    width: 100%;
+    padding: 3px;
+    font-size: 16px;
+    background-color: var(--button-color);
+    margin-top: 3px;
+
+}
+
+button:hover {
+    background-color: var(--button-hover-color);
+    cursor: pointer;
+}
+
+/*Additional Information Section*/
+
+.extra-details {
+    margin-top: 10px;
+    background-color: var(--extra-details-color);
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    border-radius: 10px;
+    padding-top: 20px;
+
+}
+
+.extra-details>p {
+    color: var(--extra-details-text-color);
+}
+
+.extra-details>p:first-child {
+    margin-bottom: 3px;
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.valid {
+    background-color: var(--valid-background-color);
+    padding: 10px;
+    width: 100%;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 10px;
+    color: var(--valid-text-color);
+    max-width: 100%;
+}
+
+.error {
+    background-color: var(--error-background-color);
+    padding: 10px;
+    width: 100%;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 10px;
+    border: 4px solid var(--error-border-color);
+    max-width: 100%;
+}
+
+@media (max-width:350px) {
+    .extra-details {
+        display: none;
+    }
+}
